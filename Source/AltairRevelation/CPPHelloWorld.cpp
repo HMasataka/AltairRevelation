@@ -1,6 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "CPPHelloWorld.h"
+#include "Kismet/KismetSystemLibrary.h"
+
 
 // Sets default values
 ACPPHelloWorld::ACPPHelloWorld()
@@ -14,13 +16,11 @@ ACPPHelloWorld::ACPPHelloWorld()
 void ACPPHelloWorld::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
 // Called every frame
 void ACPPHelloWorld::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	UKismetSystemLibrary::PrintString(this, "C++ Hello World!", true, true, FColor::Cyan, 2.f, TEXT("None"));
 }
-
