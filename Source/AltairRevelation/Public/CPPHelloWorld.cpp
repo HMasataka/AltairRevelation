@@ -2,6 +2,8 @@
 
 
 #include "CPPHelloWorld.h"
+#include "Kismet/KismetSystemLibrary.h"
+
 
 // Sets default values
 ACPPHelloWorld::ACPPHelloWorld()
@@ -15,7 +17,8 @@ ACPPHelloWorld::ACPPHelloWorld()
 void ACPPHelloWorld::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	UKismetSystemLibrary::PrintString(this, "C++ Hello World!", true, true, FColor::Cyan, 2.f, TEXT("None"));
+
 }
 
 // Called every frame
