@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Components/ArrowComponent.h"
+#include "Components/PointLightComponent.h"
 #include "CPPHelloWorld.generated.h"
 
 UCLASS()
@@ -22,7 +24,21 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
 private:
 	const float Duration = 10.0f;
 	const FLinearColor TextColor = FLinearColor(0.0, 0.66, 1.0);
+
+public:
+	UPROPERTY(EditAnyWhere)
+	TObjectPtr<USceneComponent> DefaultSceneRoot;
+
+	UPROPERTY(EditAnyWhere)
+	TObjectPtr<UStaticMeshComponent> StaticMesh;
+
+	UPROPERTY(VisibleAnywhere)
+	TObjectPtr<UArrowComponent> Arrow;
+
+	UPROPERTY(EditAnywhere)
+	TObjectPtr<UPointLightComponent> PointLight;
 };

@@ -11,6 +11,22 @@ ACPPHelloWorld::ACPPHelloWorld()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	DefaultSceneRoot = CreateDefaultSubobject<USceneComponent>(TEXT("SceneComponent"));
+	RootComponent = DefaultSceneRoot;
+
+	StaticMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMeshComponent"));
+
+	TObjectPtr<UStaticMesh> Mesh = LoadObject<UStaticMesh>(NULL, TEXT("/Game/Meshes/SM_SampleCube"), NULL, LOAD_None, NULL);
+	StaticMesh->SetStaticMesh(Mesh);
+	StaticMesh->SetupAttachment(RootComponent);
+
+	Arrow = CreateDefaultSubobject<UArrowComponent>(TEXT("ArrowComponent"));
+	Arrow->SetRelativeLocation(FVector(50.0f, 0.0f, 0.0f));
+	Arrow->SetupAttachment(StaticMesh);
+
+	PointLight = CreateDefaultSubobject<UPointLightComponent>(TEXT("PointLightComponent"));
+	PointLight->SetRelativeLocation(FVector(130.0f, 0.0f, 0.0f));
+	PointLight->SetupAttachment(StaticMesh);
 }
 
 // Called when the game starts or when spawned
