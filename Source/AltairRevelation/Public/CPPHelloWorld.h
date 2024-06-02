@@ -22,5 +22,7 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
+private:
+	const float Duration = 10.0f;
+	const FLinearColor TextColor = FLinearColor(0.0, 0.66, 1.0);
 };

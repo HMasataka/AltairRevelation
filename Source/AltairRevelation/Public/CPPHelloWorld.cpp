@@ -17,7 +17,11 @@ ACPPHelloWorld::ACPPHelloWorld()
 void ACPPHelloWorld::BeginPlay()
 {
 	Super::BeginPlay();
-	UKismetSystemLibrary::PrintString(this, "C++ Hello World!", true, true, FColor::Cyan, 2.f, TEXT("None"));
+
+	FString Message = "C++ Hello World!";
+
+
+	UKismetSystemLibrary::PrintString(this, Message, true, true, TextColor, Duration, TEXT("None"));
 
 }
 
@@ -27,4 +31,3 @@ void ACPPHelloWorld::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 }
-
