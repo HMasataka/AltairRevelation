@@ -2,6 +2,8 @@
 
 #pragma once
 
+#include "CPPCalcType.h"
+
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "Components/ArrowComponent.h"
@@ -32,8 +34,8 @@ private:
 	int32 CalcVarA = 7;
 	int32 CalcVarB = 3;
 
-	bool IsPrintHello = true;
-	int32 CalcType = 0;
+	bool IsPrintHello = false;
+	ECPPCalcType CalcType = ECPPCalcType::Subtract;
 
 public:
 	UPROPERTY(EditAnyWhere)

@@ -48,7 +48,7 @@ void ACPPHelloWorld::BeginPlay()
 	{
 		switch (CalcType)
 		{
-		case 0:
+		case ECPPCalcType::Add:
 		{
 			// Add(‘«‚µZ)‚Ìˆ—
 			int32 ResultAdd = UKismetMathLibrary::Add_IntInt(CalcVarA, CalcVarB);
@@ -56,7 +56,7 @@ void ACPPHelloWorld::BeginPlay()
 			UKismetSystemLibrary::PrintString(this, StrResultAdd, true, true, FColor::Red, Duration, TEXT("None"));
 			break;
 		}
-		case 1:
+		case ECPPCalcType::Subtract:
 		{
 			// Subtract(ˆø‚«Z)‚Ìˆ—
 			int32 ResultSubtract = CalcVarA - CalcVarB;
@@ -64,7 +64,7 @@ void ACPPHelloWorld::BeginPlay()
 			UKismetSystemLibrary::PrintString(this, StrResultSubtract, true, true, FColor::Yellow, Duration, TEXT("None"));
 			break;
 		}
-		case 2:
+		case ECPPCalcType::Multiply:
 		{
 			// Multiply(Š|‚¯Z)‚Ìˆ—
 			int32 ResultMultiply = CalcVarA * CalcVarB;
@@ -72,7 +72,7 @@ void ACPPHelloWorld::BeginPlay()
 			UKismetSystemLibrary::PrintString(this, StrResultMultiply, true, true, FColor::Green, Duration, TEXT("None"));
 			break;
 		}
-		default:
+		case ECPPCalcType::Divide:
 		{
 			// Divide(Š„‚èZ)‚Ìˆ—
 			float ResultDivide = (float)CalcVarA / (float)CalcVarB;
