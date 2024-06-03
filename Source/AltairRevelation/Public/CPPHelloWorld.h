@@ -29,6 +29,8 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 private:
+	FString Message = "C++ Hello World!";
+
 	const float Duration = 10.0f;
 	const FLinearColor TextColor = FLinearColor(0.0, 0.66, 1.0);
 	int32 CalcVarA = 7;
@@ -61,4 +63,10 @@ public:
 
 public:
 	int32 Sum(int32 A, int32 B);
+	void PrintCalcResult(const ECPPCalcType Type, const int32 A, const int32 B, const float PrintDuration);
+
+private:
+	void SetupInput();
+	void PressedH();
+	void ReleasedH();
 };
