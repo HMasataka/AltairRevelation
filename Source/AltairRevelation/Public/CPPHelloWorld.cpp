@@ -9,7 +9,7 @@
 // Sets default values
 ACPPHelloWorld::ACPPHelloWorld()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 	DefaultSceneRoot = CreateDefaultSubobject<USceneComponent>(TEXT("SceneComponent"));
@@ -35,15 +35,53 @@ void ACPPHelloWorld::BeginPlay()
 {
 	Super::BeginPlay();
 
+	// •Ï”‚ğì¬‚·‚é
 	FString Message = "C++ Hello World!";
 
-	UKismetSystemLibrary::PrintString(this, Message, true, true, TextColor, Duration, TEXT("None"));
-
-	float ResultDivide = (float)CalcVarA / (float)CalcVarB;
-	FString StrResultDivide = FString::Printf(TEXT("%f"), ResultDivide);
-
-	UKismetSystemLibrary::PrintString(this, StrResultDivide, true, true, TextColor, Duration, TEXT("None"));
-
+	if (IsPrintHello)
+	{
+		// PrintStringƒm[ƒh‚Æ“¯‚¶ˆ—
+		// UKismetSystemLibraryƒNƒ‰ƒX‚ÌPrintStringŠÖ”‚ğŒÄ‚Ño‚·
+		UKismetSystemLibrary::PrintString(this, Message, true, true, TextColor, Duration);
+	}
+	else
+	{
+		switch (CalcType)
+		{
+		case 0:
+		{
+			// Add(‘«‚µZ)‚Ìˆ—
+			int32 ResultAdd = UKismetMathLibrary::Add_IntInt(CalcVarA, CalcVarB);
+			FString StrResultAdd = FString::Printf(TEXT("%d"), ResultAdd);
+			UKismetSystemLibrary::PrintString(this, StrResultAdd, true, true, FColor::Red, Duration, TEXT("None"));
+			break;
+		}
+		case 1:
+		{
+			// Subtract(ˆø‚«Z)‚Ìˆ—
+			int32 ResultSubtract = CalcVarA - CalcVarB;
+			FString StrResultSubtract = FString::Printf(TEXT("%d"), ResultSubtract);
+			UKismetSystemLibrary::PrintString(this, StrResultSubtract, true, true, FColor::Yellow, Duration, TEXT("None"));
+			break;
+		}
+		case 2:
+		{
+			// Multiply(Š|‚¯Z)‚Ìˆ—
+			int32 ResultMultiply = CalcVarA * CalcVarB;
+			FString StrResultMultiply = FString::Printf(TEXT("%d"), ResultMultiply);
+			UKismetSystemLibrary::PrintString(this, StrResultMultiply, true, true, FColor::Green, Duration, TEXT("None"));
+			break;
+		}
+		default:
+		{
+			// Divide(Š„‚èZ)‚Ìˆ—
+			float ResultDivide = (float)CalcVarA / (float)CalcVarB;
+			FString StrResultDivide = FString::Printf(TEXT("%f"), ResultDivide);
+			UKismetSystemLibrary::PrintString(this, StrResultDivide, true, true, FColor::Blue, Duration, TEXT("None"));
+			break;
+		}
+		}
+	}
 }
 
 // Called every frame

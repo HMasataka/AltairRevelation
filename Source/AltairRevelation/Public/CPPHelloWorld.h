@@ -32,6 +32,9 @@ private:
 	int32 CalcVarA = 7;
 	int32 CalcVarB = 3;
 
+	bool IsPrintHello = true;
+	int32 CalcType = 0;
+
 public:
 	UPROPERTY(EditAnyWhere)
 	TObjectPtr<USceneComponent> DefaultSceneRoot;
