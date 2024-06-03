@@ -35,7 +35,7 @@ private:
 	int32 CalcVarB = 3;
 
 	bool IsPrintHello = false;
-	ECPPCalcType CalcType = ECPPCalcType::Subtract;
+	ECPPCalcType CalcType = ECPPCalcType::Add;
 
 public:
 	UPROPERTY(EditAnyWhere)
@@ -58,4 +58,7 @@ public:
 
 	UPROPERTY(EditAnyWhere, Category = "Point Light")
 	FLinearColor LightColor = FLinearColor::White;
+
+public:
+	int32 Sum(int32 A, int32 B);
 };

@@ -30,6 +30,8 @@ ACPPHelloWorld::ACPPHelloWorld()
 	PointLight->SetupAttachment(StaticMesh);
 }
 
+
+
 // Called when the game starts or when spawned
 void ACPPHelloWorld::BeginPlay()
 {
@@ -51,7 +53,7 @@ void ACPPHelloWorld::BeginPlay()
 		case ECPPCalcType::Add:
 		{
 			// Add(ë´ÇµéZ)ÇÃèàóù
-			int32 ResultAdd = UKismetMathLibrary::Add_IntInt(CalcVarA, CalcVarB);
+			int32 ResultAdd = Sum(CalcVarA, CalcVarB);
 			FString StrResultAdd = FString::Printf(TEXT("%d"), ResultAdd);
 			UKismetSystemLibrary::PrintString(this, StrResultAdd, true, true, FColor::Red, Duration, TEXT("None"));
 			break;
@@ -89,6 +91,11 @@ void ACPPHelloWorld::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+}
+
+int32 ACPPHelloWorld::Sum(int32 A, int32 B)
+{
+	return A + B;
 }
 
 void ACPPHelloWorld::OnConstruction(const FTransform& Transform)
