@@ -3,7 +3,8 @@
 
 #include "CPPHelloWorld.h"
 #include "Kismet/KismetSystemLibrary.h"
-
+#include "Kismet/KismetMathLibrary.h"
+#include "Kismet/KismetStringLibrary.h"
 
 // Sets default values
 ACPPHelloWorld::ACPPHelloWorld()
@@ -36,8 +37,12 @@ void ACPPHelloWorld::BeginPlay()
 
 	FString Message = "C++ Hello World!";
 
-
 	UKismetSystemLibrary::PrintString(this, Message, true, true, TextColor, Duration, TEXT("None"));
+
+	int32 ResultAdd = UKismetMathLibrary::Add_IntInt(CalcVarA,CalcVarB);
+	FString StrResultAdd = UKismetStringLibrary::Conv_IntToString(ResultAdd);
+
+	UKismetSystemLibrary::PrintString(this, StrResultAdd, true, true, TextColor, Duration, TEXT("None"));
 
 }
 
