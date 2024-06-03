@@ -39,10 +39,10 @@ void ACPPHelloWorld::BeginPlay()
 
 	UKismetSystemLibrary::PrintString(this, Message, true, true, TextColor, Duration, TEXT("None"));
 
-	int32 ResultAdd = UKismetMathLibrary::Add_IntInt(CalcVarA,CalcVarB);
-	FString StrResultAdd = UKismetStringLibrary::Conv_IntToString(ResultAdd);
+	float ResultDivide = (float)CalcVarA / (float)CalcVarB;
+	FString StrResultDivide = FString::Printf(TEXT("%f"), ResultDivide);
 
-	UKismetSystemLibrary::PrintString(this, StrResultAdd, true, true, TextColor, Duration, TEXT("None"));
+	UKismetSystemLibrary::PrintString(this, StrResultDivide, true, true, TextColor, Duration, TEXT("None"));
 
 }
 
