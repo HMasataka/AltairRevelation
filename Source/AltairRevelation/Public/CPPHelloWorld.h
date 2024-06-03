@@ -20,6 +20,7 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	virtual void OnConstruction(const FTransform& Transform) override;
 
 public:	
 	// Called every frame
@@ -41,4 +42,13 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	TObjectPtr<UPointLightComponent> PointLight;
+
+	UPROPERTY(EditAnyWhere, Category = "Point Light")
+	bool bIsVisible = false;
+
+	UPROPERTY(EditAnyWhere, Category = "Point Light")
+	float Intensity = 5000.0f;
+
+	UPROPERTY(EditAnyWhere, Category = "Point Light")
+	FLinearColor LightColor = FLinearColor::White;
 };

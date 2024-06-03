@@ -47,3 +47,10 @@ void ACPPHelloWorld::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 }
+
+void ACPPHelloWorld::OnConstruction(const FTransform& Transform)
+{
+	PointLight->SetVisibility(bIsVisible);
+	PointLight->SetIntensity(Intensity);
+	PointLight->SetLightColor(LightColor);
+}
