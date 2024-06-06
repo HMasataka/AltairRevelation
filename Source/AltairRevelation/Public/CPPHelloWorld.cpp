@@ -29,6 +29,8 @@ ACPPHelloWorld::ACPPHelloWorld()
 	PointLight = CreateDefaultSubobject<UPointLightComponent>(TEXT("PointLightComponent"));
 	PointLight->SetRelativeLocation(FVector(130.0f, 0.0f, 0.0f));
 	PointLight->SetupAttachment(StaticMesh);
+
+	OnPrintHello.AddDynamic(this, &ACPPHelloWorld::PrintHello);
 }
 
 
@@ -120,8 +122,7 @@ void ACPPHelloWorld::SetupInput()
 
 void ACPPHelloWorld::PressedH()
 {
-	// Hello World!‚ğo—Í‚·‚éˆ—
-	UKismetSystemLibrary::PrintString(this, Message, true, true, TextColor, Duration, TEXT("None"));
+	OnPrintHello.Broadcast();
 }
 
 void ACPPHelloWorld::ReleasedH()
@@ -135,4 +136,10 @@ void ACPPHelloWorld::OnConstruction(const FTransform& Transform)
 	PointLight->SetVisibility(bIsVisible);
 	PointLight->SetIntensity(Intensity);
 	PointLight->SetLightColor(LightColor);
+}
+
+void ACPPHelloWorld::PrintHello()
+{
+	// Hello World!‚ğo—Í‚·‚éˆ—
+	UKismetSystemLibrary::PrintString(this, Message, true, true, TextColor, Duration, TEXT("None"));
 }

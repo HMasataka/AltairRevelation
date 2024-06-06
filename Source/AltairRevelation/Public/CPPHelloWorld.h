@@ -66,6 +66,13 @@ public:
 	void PressedActionPrintCalcResult();
 	void PrintCalcResult(const ECPPCalcType Type, const int32 A, const int32 B, const float PrintDuration);
 
+	UFUNCTION()
+	void PrintHello();
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FPrintHelloDelegate);
+
+	UPROPERTY(BlueprintAssignable, Category = "CPP_BP")
+	FPrintHelloDelegate OnPrintHello;
+
 private:
 	void SetupInput();
 	void PressedH();
