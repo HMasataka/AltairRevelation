@@ -61,14 +61,7 @@ void ACPPHelloWorld::PrintCalcResult(const ECPPCalcType Type, const int32 A, con
 			// Add(ë´ÇµéZ)ÇÃèàóù
 			int32 ResultAdd = Sum(CalcVarA, CalcVarB);
 			FString StrResultAdd = FString::Printf(TEXT("%d"), ResultAdd);
-			UKismetSystemLibrary::PrintString(
-				this
-				, StrResultAdd
-				, true
-				, true
-				, FColor::Red
-				, Duration
-				, TEXT("None"));
+			UKismetSystemLibrary::PrintString(this, StrResultAdd, true, true, FColor::Red, Duration, TEXT("None"));
 			break;
 		}
 		case ECPPCalcType::Subtract:
@@ -76,14 +69,7 @@ void ACPPHelloWorld::PrintCalcResult(const ECPPCalcType Type, const int32 A, con
 			// Subtract(à¯Ç´éZ)ÇÃèàóù
 			int32 ResultSubtract = CalcVarA - CalcVarB;
 			FString StrResultSubtract = FString::Printf(TEXT("%d"), ResultSubtract);
-			UKismetSystemLibrary::PrintString(
-				this
-				, StrResultSubtract
-				, true
-				, true
-				, FColor::Yellow
-				, Duration
-				, TEXT("None"));
+			UKismetSystemLibrary::PrintString(this, StrResultSubtract, true, true, FColor::Yellow, Duration, TEXT("None"));
 			break;
 		}
 		case ECPPCalcType::Multiply:
@@ -91,14 +77,7 @@ void ACPPHelloWorld::PrintCalcResult(const ECPPCalcType Type, const int32 A, con
 			// Multiply(ä|ÇØéZ)ÇÃèàóù
 			int32 ResultMultiply = CalcVarA * CalcVarB;
 			FString StrResultMultiply = FString::Printf(TEXT("%d"), ResultMultiply);
-			UKismetSystemLibrary::PrintString(
-				this
-				, StrResultMultiply
-				, true
-				, true
-				, FColor::Green
-				, Duration
-				, TEXT("None"));
+			UKismetSystemLibrary::PrintString(this, StrResultMultiply, true, true, FColor::Green, Duration, TEXT("None"));
 			break;
 		}
 		case ECPPCalcType::Divide:
@@ -106,14 +85,7 @@ void ACPPHelloWorld::PrintCalcResult(const ECPPCalcType Type, const int32 A, con
 			// Divide(äÑÇËéZ)ÇÃèàóù
 			float ResultDivide = (float)CalcVarA / (float)CalcVarB;
 			FString StrResultDivide = FString::Printf(TEXT("%f"), ResultDivide);
-			UKismetSystemLibrary::PrintString(
-				this
-				, StrResultDivide
-				, true
-				, true
-				, FColor::Blue
-				, Duration
-				, TEXT("None"));
+			UKismetSystemLibrary::PrintString(this, StrResultDivide, true, true, FColor::Blue, Duration, TEXT("None"));
 			break;
 		}
 	}
