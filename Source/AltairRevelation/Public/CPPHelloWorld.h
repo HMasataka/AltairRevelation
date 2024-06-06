@@ -63,6 +63,7 @@ public:
 
 public:
 	int32 Sum(int32 A, int32 B);
+	void PressedActionPrintCalcResult();
 	void PrintCalcResult(const ECPPCalcType Type, const int32 A, const int32 B, const float PrintDuration);
 
 private:

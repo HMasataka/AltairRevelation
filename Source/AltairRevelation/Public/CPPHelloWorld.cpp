@@ -103,12 +103,19 @@ int32 ACPPHelloWorld::Sum(int32 A, int32 B)
 	return A + B;
 }
 
+void ACPPHelloWorld::PressedActionPrintCalcResult()
+{
+	PrintCalcResult(CalcType, CalcVarA, CalcVarB, Duration);
+}
+
 void ACPPHelloWorld::SetupInput()
 {
 	EnableInput(UGameplayStatics::GetPlayerController(GetWorld(), 0));
 
 	InputComponent->BindKey(EKeys::H, IE_Pressed, this, &ACPPHelloWorld::PressedH);
 	InputComponent->BindKey(EKeys::H, IE_Released, this, &ACPPHelloWorld::ReleasedH);
+
+	InputComponent->BindAction("ActionPrintCalcResult", IE_Pressed, this, &ACPPHelloWorld::PressedActionPrintCalcResult);
 }
 
 void ACPPHelloWorld::PressedH()
