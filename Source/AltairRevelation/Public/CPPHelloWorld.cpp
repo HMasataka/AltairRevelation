@@ -44,8 +44,8 @@ void ACPPHelloWorld::BeginPlay()
 
 	if (IsPrintHello)
 	{
-		// PrintStringƒm[ƒh‚Æ“¯‚¶ˆ—
-		// UKismetSystemLibraryƒNƒ‰ƒX‚ÌPrintStringŠÖ”‚ğŒÄ‚Ño‚·
+		// PrintStringï¿½mï¿½[ï¿½hï¿½Æ“ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		// UKismetSystemLibraryï¿½Nï¿½ï¿½ï¿½Xï¿½ï¿½PrintStringï¿½Öï¿½ï¿½ï¿½ï¿½Ä‚Ñoï¿½ï¿½
 		UKismetSystemLibrary::PrintString(this, Message, true, true, TextColor, Duration);
 	}
 	else
@@ -60,7 +60,7 @@ void ACPPHelloWorld::PrintCalcResult(const ECPPCalcType Type, const int32 A, con
 	{
 		case ECPPCalcType::Add:
 		{
-			// Add(‘«‚µZ)‚Ìˆ—
+			// Add(ï¿½ï¿½ï¿½ï¿½ï¿½Z)ï¿½Ìï¿½ï¿½ï¿½
 			int32 ResultAdd = Sum(CalcVarA, CalcVarB);
 			FString StrResultAdd = FString::Printf(TEXT("%d"), ResultAdd);
 			UKismetSystemLibrary::PrintString(this, StrResultAdd, true, true, FColor::Red, Duration, TEXT("None"));
@@ -68,7 +68,7 @@ void ACPPHelloWorld::PrintCalcResult(const ECPPCalcType Type, const int32 A, con
 		}
 		case ECPPCalcType::Subtract:
 		{
-			// Subtract(ˆø‚«Z)‚Ìˆ—
+			// Subtract(ï¿½ï¿½ï¿½ï¿½ï¿½Z)ï¿½Ìï¿½ï¿½ï¿½
 			int32 ResultSubtract = CalcVarA - CalcVarB;
 			FString StrResultSubtract = FString::Printf(TEXT("%d"), ResultSubtract);
 			UKismetSystemLibrary::PrintString(this, StrResultSubtract, true, true, FColor::Yellow, Duration, TEXT("None"));
@@ -76,7 +76,7 @@ void ACPPHelloWorld::PrintCalcResult(const ECPPCalcType Type, const int32 A, con
 		}
 		case ECPPCalcType::Multiply:
 		{
-			// Multiply(Š|‚¯Z)‚Ìˆ—
+			// Multiply(ï¿½|ï¿½ï¿½ï¿½Z)ï¿½Ìï¿½ï¿½ï¿½
 			int32 ResultMultiply = CalcVarA * CalcVarB;
 			FString StrResultMultiply = FString::Printf(TEXT("%d"), ResultMultiply);
 			UKismetSystemLibrary::PrintString(this, StrResultMultiply, true, true, FColor::Green, Duration, TEXT("None"));
@@ -84,7 +84,7 @@ void ACPPHelloWorld::PrintCalcResult(const ECPPCalcType Type, const int32 A, con
 		}
 		case ECPPCalcType::Divide:
 		{
-			// Divide(Š„‚èZ)‚Ìˆ—
+			// Divide(ï¿½ï¿½ï¿½ï¿½Z)ï¿½Ìï¿½ï¿½ï¿½
 			float ResultDivide = (float)CalcVarA / (float)CalcVarB;
 			FString StrResultDivide = FString::Printf(TEXT("%f"), ResultDivide);
 			UKismetSystemLibrary::PrintString(this, StrResultDivide, true, true, FColor::Blue, Duration, TEXT("None"));
@@ -127,7 +127,7 @@ void ACPPHelloWorld::PressedH()
 
 void ACPPHelloWorld::ReleasedH()
 {
-	// ŒvZŒ‹‰Ê‚ğo—Í‚·‚éˆ—
+	// ï¿½vï¿½Zï¿½ï¿½ï¿½Ê‚ï¿½ï¿½oï¿½Í‚ï¿½ï¿½éˆï¿½ï¿½
 	PrintCalcResult(CalcType, CalcVarA, CalcVarB, Duration);
 }
 
@@ -140,6 +140,6 @@ void ACPPHelloWorld::OnConstruction(const FTransform& Transform)
 
 void ACPPHelloWorld::PrintHello()
 {
-	// Hello World!‚ğo—Í‚·‚éˆ—
+	// Hello World!ï¿½ï¿½ï¿½oï¿½Í‚ï¿½ï¿½éˆï¿½ï¿½
 	UKismetSystemLibrary::PrintString(this, Message, true, true, TextColor, Duration, TEXT("None"));
 }

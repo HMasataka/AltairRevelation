@@ -1,0 +1,50 @@
+[
+	{
+		"file": "C:\\Users\\HMasataka\\Documents\\Unreal Projects\\AltairRevelation\\Source\\AltairRevelation\\AltairRevelation.Build.cs",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\HMasataka\\Documents\\Unreal Projects\\AltairRevelation\\.vscode\\compileCommands_AltairRevelation\\AltairRevelation.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\HMasataka\\Documents\\Unreal Projects\\AltairRevelation\\Source\\AltairRevelation\\AltairRevelation.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\HMasataka\\Documents\\Unreal Projects\\AltairRevelation\\.vscode\\compileCommands_AltairRevelation\\AltairRevelation.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\HMasataka\\Documents\\Unreal Projects\\AltairRevelation\\Source\\AltairRevelation\\AltairRevelation.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\HMasataka\\Documents\\Unreal Projects\\AltairRevelation\\.vscode\\compileCommands_AltairRevelation\\AltairRevelation.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\HMasataka\\Documents\\Unreal Projects\\AltairRevelation\\Source\\AltairRevelation\\Public\\CPPCalcType.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\HMasataka\\Documents\\Unreal Projects\\AltairRevelation\\.vscode\\compileCommands_AltairRevelation\\AltairRevelation.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\HMasataka\\Documents\\Unreal Projects\\AltairRevelation\\Source\\AltairRevelation\\Public\\CPPHelloWorld.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\HMasataka\\Documents\\Unreal Projects\\AltairRevelation\\.vscode\\compileCommands_AltairRevelation\\AltairRevelation.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\HMasataka\\Documents\\Unreal Projects\\AltairRevelation\\Source\\AltairRevelation\\Public\\CPPHelloWorld.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\HMasataka\\Documents\\Unreal Projects\\AltairRevelation\\.vscode\\compileCommands_AltairRevelation\\AltairRevelation.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Source"
+	}
+]
