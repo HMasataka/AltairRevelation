@@ -44,8 +44,6 @@ void ACPPHelloWorld::BeginPlay()
 
 	if (IsPrintHello)
 	{
-		// PrintString�m�[�h�Ɠ�������
-		// UKismetSystemLibrary�N���X��PrintString�֐����Ăяo��
 		UKismetSystemLibrary::PrintString(this, Message, true, true, TextColor, Duration);
 	}
 	else
@@ -60,7 +58,6 @@ void ACPPHelloWorld::PrintCalcResult(const ECPPCalcType Type, const int32 A, con
 	{
 		case ECPPCalcType::Add:
 		{
-			// Add(�����Z)�̏���
 			int32 ResultAdd = Sum(CalcVarA, CalcVarB);
 			FString StrResultAdd = FString::Printf(TEXT("%d"), ResultAdd);
 			UKismetSystemLibrary::PrintString(this, StrResultAdd, true, true, FColor::Red, Duration, TEXT("None"));
@@ -68,7 +65,6 @@ void ACPPHelloWorld::PrintCalcResult(const ECPPCalcType Type, const int32 A, con
 		}
 		case ECPPCalcType::Subtract:
 		{
-			// Subtract(�����Z)�̏���
 			int32 ResultSubtract = CalcVarA - CalcVarB;
 			FString StrResultSubtract = FString::Printf(TEXT("%d"), ResultSubtract);
 			UKismetSystemLibrary::PrintString(this, StrResultSubtract, true, true, FColor::Yellow, Duration, TEXT("None"));
@@ -76,7 +72,6 @@ void ACPPHelloWorld::PrintCalcResult(const ECPPCalcType Type, const int32 A, con
 		}
 		case ECPPCalcType::Multiply:
 		{
-			// Multiply(�|���Z)�̏���
 			int32 ResultMultiply = CalcVarA * CalcVarB;
 			FString StrResultMultiply = FString::Printf(TEXT("%d"), ResultMultiply);
 			UKismetSystemLibrary::PrintString(this, StrResultMultiply, true, true, FColor::Green, Duration, TEXT("None"));
@@ -84,7 +79,6 @@ void ACPPHelloWorld::PrintCalcResult(const ECPPCalcType Type, const int32 A, con
 		}
 		case ECPPCalcType::Divide:
 		{
-			// Divide(����Z)�̏���
 			float ResultDivide = (float)CalcVarA / (float)CalcVarB;
 			FString StrResultDivide = FString::Printf(TEXT("%f"), ResultDivide);
 			UKismetSystemLibrary::PrintString(this, StrResultDivide, true, true, FColor::Blue, Duration, TEXT("None"));
@@ -127,7 +121,6 @@ void ACPPHelloWorld::PressedH()
 
 void ACPPHelloWorld::ReleasedH()
 {
-	// �v�Z���ʂ��o�͂��鏈��
 	PrintCalcResult(CalcType, CalcVarA, CalcVarB, Duration);
 }
 
@@ -140,6 +133,5 @@ void ACPPHelloWorld::OnConstruction(const FTransform& Transform)
 
 void ACPPHelloWorld::PrintHello()
 {
-	// Hello World!���o�͂��鏈��
 	UKismetSystemLibrary::PrintString(this, Message, true, true, TextColor, Duration, TEXT("None"));
 }
